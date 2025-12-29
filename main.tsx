@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/Hero';
 import { SocialProof } from '@/components/SocialProof';
@@ -76,5 +78,12 @@ const Index = () => {
     </>
   );
 };
-
-export default Index;
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <Index />
+    </React.StrictMode>
+  );
+}
